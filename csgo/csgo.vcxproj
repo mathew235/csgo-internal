@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{0A5E5EC7-5BE5-4BDC-A266-71011E5EAC36}</ProjectGuid>
+    <RootNamespace>csgo</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IntDir>$(SolutionDir)$(Configuration)_intermediate\$(ProjectName)\</IntDir>
+    <LibraryPath>$(SolutionDir)$(Configuration)\;$(LibraryPath)</LibraryPath>
+    <TargetName>csgo_modest</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IntDir>$(SolutionDir)$(Configuration)_intermediate\$(ProjectName)\</IntDir>
+    <LibraryPath>$(SolutionDir)$(Configuration)\;$(LibraryPath)</LibraryPath>
+    <TargetName>csgo_modest</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>false</ConformanceMode>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalDependencies>shared.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>false</ConformanceMode>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>shared.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="features\misc\movement.cpp" />
+    <ClCompile Include="features\visuals\player_esp.cpp" />
+    <ClCompile Include="hooks\functions\create_move.cpp" />
+    <ClCompile Include="hooks\functions\paint.cpp" />
+    <ClCompile Include="hooks\functions\player_hurt.cpp" />
+    <ClCompile Include="hooks\functions\reload_fonts.cpp" />
+    <ClCompile Include="hooks\hook_handler.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="menu.cpp" />
+    <ClCompile Include="sdk\entities.cpp" />
+    <ClCompile Include="sdk\helper\classids.cpp" />
+    <ClCompile Include="sdk\helper\events.cpp" />
+    <ClCompile Include="sdk\helper\game.cpp" />
+    <ClCompile Include="sdk\helper\interfaces.cpp" />
+    <ClCompile Include="sdk\helper\render.cpp" />
+    <ClCompile Include="sdk\helper\netvars.cpp" />
+    <ClCompile Include="sdk\helper\weaponids.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="context\client.hpp" />
+    <ClInclude Include="context\cfg.hpp" />
+    <ClInclude Include="context\csgo.hpp" />
+    <ClInclude Include="context\mem.hpp" />
+    <ClInclude Include="csgo.hpp" />
+    <ClInclude Include="features\features.hpp" />
+    <ClInclude Include="features\misc\movement.hpp" />
+    <ClInclude Include="features\visuals\player_esp.hpp" />
+    <ClInclude Include="hooks\hook_handler.hpp" />
+    <ClInclude Include="menu.hpp" />
+    <ClInclude Include="sdk\entities.hpp" />
+    <ClInclude Include="sdk\helper\classids.hpp" />
+    <ClInclude Include="sdk\helper\events.hpp" />
+    <ClInclude Include="sdk\helper\game.hpp" />
+    <ClInclude Include="sdk\helper\interfaces.hpp" />
+    <ClInclude Include="sdk\helper\netvars.hpp" />
+    <ClInclude Include="sdk\helper\render.hpp" />
+    <ClInclude Include="sdk\helper\weaponids.hpp" />
+    <ClInclude Include="sdk\sdk.hpp" />
+    <ClInclude Include="sdk\source_engine\CFontManager.hpp" />
+    <ClInclude Include="sdk\source_engine\CGlobalVarsBase.hpp" />
+    <ClInclude Include="sdk\source_engine\CHLClient.hpp" />
+    <ClInclude Include="sdk\source_engine\CInputSystem.hpp" />
+    <ClInclude Include="sdk\source_engine\CItemSystem.hpp" />
+    <ClInclude Include="sdk\source_engine\datatypes\CCSWeaponData.hpp" />
+    <ClInclude Include="sdk\source_engine\datatypes\ClientClass.hpp" />
+    <ClInclude Include="sdk\source_engine\datatypes\ConVar.hpp" />
+    <ClInclude Include="sdk\source_engine\datatypes\CUserCmd.hpp" />
+    <ClInclude Include="sdk\source_engine\datatypes\datamap.hpp" />
+    <ClInclude Include="sdk\source_engine\datatypes\IGameEvent.hpp" />
+    <ClInclude Include="sdk\source_engine\datatypes\ServerClass.hpp" />
+    <ClInclude Include="sdk\source_engine\IClientEntity.hpp" />
+    <ClInclude Include="sdk\source_engine\IClientEntityList.h" />
+    <ClInclude Include="sdk\source_engine\IClientMode.hpp" />
+    <ClInclude Include="sdk\source_engine\ICVar.hpp" />
+    <ClInclude Include="sdk\source_engine\IGameEventManager.hpp" />
+    <ClInclude Include="sdk\source_engine\ISchemeManager.hpp" />
+    <ClInclude Include="sdk\source_engine\IServer.hpp" />
+    <ClInclude Include="sdk\source_engine\ISurface.hpp" />
+    <ClInclude Include="sdk\source_engine\IVEngineClient.hpp" />
+    <ClInclude Include="sdk\source_engine\IVEngineVGui.hpp" />
+    <ClInclude Include="sdk\source_engine\datatypes\player_info_t.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
